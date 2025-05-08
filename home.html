@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My E-Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            maroon: '#800000',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .float-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #800000 0%, #ff9999 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(128, 0, 0, 0.1), 0 10px 10px -5px rgba(128, 0, 0, 0.04);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Mobile-friendly Navbar -->
+  <nav class="fixed top-0 w-full bg-maroon/95 backdrop-blur-lg z-50 border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+              <div class="flex items-center">
+                  <span class="text-white font-semibold text-lg">Angeline Cristine R. Dolz</span>
+              </div>
+              <!-- Mobile menu button -->
+              <div class="flex md:hidden">
+                  <button type="button" onclick="toggleMenu()" class="text-white hover:text-gray-300 focus:outline-none">
+                      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                      </svg>
+                  </button>
+              </div>
+              <!-- Desktop menu -->
+              <div class="hidden md:flex space-x-8">
+                  <a href="home.html" class="text-yellow-400 font-medium">Home</a>
+                  <a href="preliminaries.html" class="text-white/80 hover:text-white transition-colors">Preliminaries</a>
+                  <a href="instructional-competence.html" class="text-white/80 hover:text-white transition-colors">Instructional Competence</a>
+                  <a href="students-page.html" class="text-white/80 hover:text-white transition-colors">Students' Page</a>
+                  <a href="professional-development.html" class="text-white/80 hover:text-white transition-colors">Professional Development</a>
+                  <a href="my-story.html" class="text-white/80 hover:text-white transition-colors">My Story</a>
+              </div>
+          </div>
+      </div>
+      <!-- Mobile menu -->
+      <div class="nav-menu hidden md:hidden bg-maroon/95 backdrop-blur-lg">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+              <a href="home.html" class="block px-3 py-2 text-yellow-400 font-medium">Home</a>
+              <a href="preliminaries.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Preliminaries</a>
+              <a href="instructional-competence.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Instructional Competence</a>
+              <a href="students-page.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Students' Page</a>
+              <a href="professional-development.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Professional Development</a>
+              <a href="my-story.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">My Story</a>
+          </div>
+      </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+        const menu = document.querySelector('.nav-menu');
+        menu.classList.toggle('hidden');
+    }
+  </script>
+
+
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-br from-maroon to-maroon-800 min-h-screen pt-16 hero-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div class="text-center">
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight float-animation">
+          Welcome to My E-Portfolio
+        </h1>
+        <p class="text-xl md:text-2xl text-white/90 font-light max-w-3xl mx-auto mb-12">
+          A showcase of my journey, growth, and achievements as an educator at Camarines Norte State College
+        </p>
+        <div class="flex justify-center space-x-4">
+          <a href="#portfolio-sections" class="bg-white text-maroon px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+            Explore Portfolio
+          </a>
+          <a href="my-story.html" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors">
+            My Story
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 w-full">
+      <svg class="w-full h-24" viewBox="0 0 1440 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 24.9999L60 32.8461C120 40.6922 240 56.3845 360 48.5384C480 40.6922 600 8.99994 720 0C840 -8.99994 960 8.99994 1080 16.8461C1200 24.9999 1320 24.9999 1380 24.9999H1440V73.9999H1380C1320 73.9999 1200 73.9999 1080 73.9999C960 73.9999 840 73.9999 720 73.9999C600 73.9999 480 73.9999 360 73.9999C240 73.9999 120 73.9999 60 73.9999H0V24.9999Z" fill="#F9FAFB"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Portfolio Sections -->
+  <div id="portfolio-sections" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Preliminaries Card -->
+      <a href="preliminaries.html" class="group">
+        <div class="bg-white rounded-2xl p-8 card-hover">
+          <div class="h-16 w-16 bg-maroon/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-maroon/20 transition-colors">
+            <svg class="w-8 h-8 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Preliminaries</h3>
+          <p class="text-gray-600">Explore the foundational aspects of my educational journey and teaching philosophy.</p>
+        </div>
+      </a>
+
+      <!-- Instructional Competence Card -->
+      <a href="instructional-competence.html" class="group">
+        <div class="bg-white rounded-2xl p-8 card-hover">
+          <div class="h-16 w-16 bg-maroon/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-maroon/20 transition-colors">
+            <svg class="w-8 h-8 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Instructional Competence</h3>
+          <p class="text-gray-600">View my teaching materials, lesson plans, and classroom implementation strategies.</p>
+        </div>
+      </a>
+
+      <!-- Students' Page Card -->
+      <a href="students-page.html" class="group">
+        <div class="bg-white rounded-2xl p-8 card-hover">
+          <div class="h-16 w-16 bg-maroon/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-maroon/20 transition-colors">
+            <svg class="w-8 h-8 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Students' Page</h3>
+          <p class="text-gray-600">Discover student work samples and their feedback on our learning journey together.</p>
+        </div>
+      </a>
+
+      <!-- Professional Development Card -->
+      <a href="professional-development.html" class="group">
+        <div class="bg-white rounded-2xl p-8 card-hover">
+          <div class="h-16 w-16 bg-maroon/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-maroon/20 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-maroon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.84 6.162L12 21l-7-3.26a12.083 12.083 0 01.84-6.162L12 14z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Professional Development</h3>
+          <p class="text-gray-600">Discover my attendance records, coaching sessions, mentoring experiences with my Cooperating Teacher, and reflective journal entries.</p>
+        </div>
+      </a>
+
+      <a href="my-story.html" class="group">
+        <div class="bg-white rounded-2xl p-8 card-hover">
+          <div class="h-16 w-16 bg-maroon/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-maroon/20 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-maroon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 19.5c.2.2.5.5.9.5h8c.4 0 .7-.3.9-.5L14 6.5c-.2-.2-.5-.5-.9-.5H4c-.4 0-.7.3-.9.5L4 19.5z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 6.5l4 3V19.5l-4-3" />
+        </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">My Story</h3>
+          <p class="text-gray-600">Explore my story and discover the milestones that define my journey.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-maroon text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-white/80">© 2025 Angeline Cristine R. Dolz E-Portfolio. All rights reserved.</p>
+      <p class="text-white/60 text-sm mt-2">Camarines Norte State College - College of Education</p>
+    </div>
+  </footer>
+
+</body>
+</html>

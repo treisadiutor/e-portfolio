@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students' Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        maroon: '#800000',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .prose {
+            max-width: none;
+        }
+        
+        .nav-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .nav-menu.hidden {
+            transform: translateX(-100%);
+        }
+
+        .header-gradient {
+            background: linear-gradient(135deg, #800000 0%, #4a0000 100%);
+        }
+
+        .header-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: headerPattern 60s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-maroon/95 backdrop-blur-lg z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-white font-semibold text-lg">Angeline Cristine R. Dolz</span>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex md:hidden">
+                    <button type="button" onclick="toggleMenu()" class="text-white hover:text-gray-300 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="home.html" class="text-white/80 hover:text-white transition-colors">Home</a>
+                    <a href="preliminaries.html" class="text-white/80 hover:text-white transition-colors">Preliminaries</a>
+                    <a href="instructional-competence.html" class="text-white/80 hover:text-white transition-colors">Instructional Competence</a>
+                    <a href="students-page.html" class="text-white/80 hover:text-white transition-colors">Students' Page</a>
+                    <a href="professional-development.html" class="text-yellow-400 font-medium">Professional Development</a>
+                    <a href="my-story.html" class="text-white/80 hover:text-white transition-colors">My Story</a>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="nav-menu hidden md:hidden bg-maroon/95 backdrop-blur-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="home.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Home</a>
+                <a href="preliminaries.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Preliminaries</a>
+                <a href="instructional-competence.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Instructional Competence</a>
+                <a href="students-page.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Students' Page</a>
+                <a href="professional-development.html" class="block px-3 block px-3 py-2 text-yellow-400 font-medium">Professional Development</a>
+                <a href="my-story.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">My Story</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Header -->
+    <header class="header-gradient relative pt-24 pb-32 overflow-hidden">
+        <div class="header-pattern absolute inset-0 opacity-30"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+                Professional Development Page
+            </h1>
+            <p class="text-xl md:text-2xl text-white/90 font-light max-w-3xl mx-auto">
+                Camarines Norte State College - College of Education
+            </p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-br from-transparent via-transparent to-white transform -skew-y-3"></div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+
+    <!-- Proof of Attendance (DTR) Section -->
+    <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8">
+    <h2 class="text-3xl font-bold text-maroon mb-6">Proof of Attendance (DTR)</h2>
+  
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+        <img src="/attendance/DTR1.jpg" alt="DTR 1" class="w-full h-full object-cover">
+        <div class="p-4">
+          <p class="text-gray-800 font-semibold text-center">Week 1 Attendance Record</p>
+        </div>
+      </div>
+  
+      <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+        <img src="/attendance/DTR2.jpg" alt="DTR 2" class="w-full h-full object-cover">
+        <div class="p-4">
+          <p class="text-gray-800 font-semibold text-center">Week 2 Attendance Record</p>
+        </div>
+      </div>
+  
+      <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+        <img src="/attendance/DTR3.jpg" alt="DTR 3" class="w-full h-full object-cover">
+        <div class="p-4">
+          <p class="text-gray-800 font-semibold text-center">Week 3 Attendance Record</p>
+        </div>
+      </div>
+  
+      <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+        <img src="/attendance/DTR4.jpg" alt="DTR 4" class="w-full h-full object-cover">
+        <div class="p-4">
+          <p class="text-gray-800 font-semibold text-center">Week 4 Attendance Record</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <!-- Coaching and Mentoring of the Cooperating Teacher Section -->
+    <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8">
+        <h2 class="text-3xl font-bold text-maroon mb-6">Coaching and Mentoring of the Cooperating Teacher</h2>
+        <p class="text-sm text-gray-600 mb-4">Note: Permission from the cooperating teacher was requested prior to documentation.</p>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+            <img src="/coaching-mentoring/CM1.jpg" alt="Coaching and Mentoring 1" class="w-full h-full object-cover">
+            <div class="p-4">
+            <p class="text-gray-700 font-medium text-center">CM1: Initial coaching session discussing classroom strategies</p>
+            </div>
+        </div>
+    
+        
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+            <img src="/coaching-mentoring/CM2.jpg" alt="Coaching and Mentoring 2" class="w-full h-full object-cover">
+            <div class="p-4">
+            <p class="text-gray-700 font-medium text-center">CM2: Feedback and mentoring session after classroom observation</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Reflective Journal Section -->
+    <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8">
+        <h2 class="text-3xl font-bold text-maroon mb-6">Reflective Journal</h2>
+    
+        <div class="prose max-w-none text-gray-800">
+        <p>
+            Teaching in a post-pandemic classroom has been both a challenge and a profound learning experience.
+            As a pre-service teacher, I entered the classroom aware of the unique needs and anxieties that students carried
+            with them after years of remote learning and social isolation. I quickly realized that my role extended beyond
+            delivering content; I needed to foster a sense of community, safety, and resilience.
+        </p>
+    
+        <p>
+            I embraced flexible teaching strategies, blending technology with hands-on activities to accommodate diverse
+            learning preferences. I encourage open dialogue, allowing students to share their experiences and feelings, which
+            helps rebuild trust and engagement. I noticed that students thrived when given opportunities to collaborate,
+            problem-solve, and support one another, reinforcing my belief in constructivist approaches.
+        </p>
+    
+        <p>
+            Adapting to new health protocols and shifting expectations taught me the importance of patience, empathy, and
+            adaptability. I learned to celebrate small victories—whether it was a student’s breakthrough in understanding or a
+            group’s successful project. This experience has shaped my teaching philosophy, reminding me that education is not
+            just about academic achievement but also about nurturing well-being and community. I am grateful for the
+            resilience I witnessed and the growth I experienced, both as an educator and as a lifelong learner.
+        </p>
+        </div>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer class="bg-maroon text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-white/80">© 2025 Angeline Cristine R. Dolz E-Portfolio. All rights reserved.</p>
+        <p class="text-white/60 text-sm mt-2">Camarines Norte State College - College of Education</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+  

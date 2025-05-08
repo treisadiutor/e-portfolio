@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructional Competence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        maroon: '#800000',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .prose {
+            max-width: none;
+        }
+        
+        .nav-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .nav-menu.hidden {
+            transform: translateX(-100%);
+        }
+
+        .header-gradient {
+            background: linear-gradient(135deg, #800000 0%, #4a0000 100%);
+        }
+
+        .header-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: headerPattern 60s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-maroon/95 backdrop-blur-lg z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-white font-semibold text-lg">Angeline Cristine R. Dolz</span>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex md:hidden">
+                    <button type="button" onclick="toggleMenu()" class="text-white hover:text-gray-300 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="home.html" class="text-white/80 hover:text-white transition-colors">Home</a>
+                    <a href="preliminaries.html" class="text-white/80 hover:text-white transition-colors">Preliminaries</a>
+                    <a href="instructional-competence.html" class="text-yellow-400 font-medium">Instructional Competence</a>
+                    <a href="students-page.html" class="text-white/80 hover:text-white transition-colors">Students' Page</a>
+                    <a href="professional-development.html" class="text-white/80 hover:text-white transition-colors">Professional Development</a>
+                    <a href="my-story.html" class="text-white/80 hover:text-white transition-colors">My Story</a>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="nav-menu hidden md:hidden bg-maroon/95 backdrop-blur-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="home.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Home</a>
+                <a href="preliminaries.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Preliminaries</a>
+                <a href="instructional-competence.html" class="block px-3 py-2 text-yellow-400 font-medium">Instructional Competence</a>
+                <a href="students-page.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Students' Page</a>
+                <a href="professional-development.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Professional Development</a>
+                <a href="my-story.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">My Story</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Enhanced Header -->
+    <header class="header-gradient relative pt-24 pb-32 overflow-hidden">
+        <div class="header-pattern absolute inset-0 opacity-30"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+                Instructional Competence
+            </h1>
+            <p class="text-xl md:text-2xl text-white/90 font-light max-w-3xl mx-auto">
+                Camarines Norte State College - College of Education
+            </p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-br from-transparent via-transparent to-white transform -skew-y-3"></div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Lesson Plans Section -->
+    <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8">
+        <h2 class="text-3xl font-bold text-maroon mb-6">Lesson Plans</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div onclick="openPDFModal('/lesson-plans/lp1.pdf')" class="cursor-pointer bg-yellow-100 border-l-8 border-yellow-400 rounded-xl shadow-md p-6 flex flex-col justify-between transition-transform hover:scale-105">
+            <h3 class="text-xl font-semibold text-maroon mb-2">Lesson Plan 1</h3>
+            <p class="text-gray-600">Introduction to Photosynthesis</p>
+        </div>
+    
+        <div onclick="openPDFModal('/lesson-plans/lp2.pdf')" class="cursor-pointer bg-blue-100 border-l-8 border-blue-400 rounded-xl shadow-md p-6 flex flex-col justify-between transition-transform hover:scale-105">
+            <h3 class="text-xl font-semibold text-maroon mb-2">Lesson Plan 2</h3>
+            <p class="text-gray-600">Basic Algebra Concepts</p>
+        </div>
+    
+        <div onclick="openPDFModal('/lesson-plans/lp3.pdf')" class="cursor-pointer bg-green-100 border-l-8 border-green-400 rounded-xl shadow-md p-6 flex flex-col justify-between transition-transform hover:scale-105">
+            <h3 class="text-xl font-semibold text-maroon mb-2">Lesson Plan 3</h3>
+            <p class="text-gray-600">World War II Overview</p>
+        </div>
+    
+        <div onclick="openPDFModal('/lesson-plans/lp4.pdf')" class="cursor-pointer bg-pink-100 border-l-8 border-pink-400 rounded-xl shadow-md p-6 flex flex-col justify-between transition-transform hover:scale-105">
+            <h3 class="text-xl font-semibold text-maroon mb-2">Lesson Plan 4</h3>
+            <p class="text-gray-600">Understanding Poetry</p>
+        </div>
+    
+        <div onclick="openPDFModal('/lesson-plans/lp5.pdf')" class="cursor-pointer bg-purple-100 border-l-8 border-purple-400 rounded-xl shadow-md p-6 flex flex-col justify-between transition-transform hover:scale-105">
+            <h3 class="text-xl font-semibold text-maroon mb-2">Lesson Plan 5</h3>
+            <p class="text-gray-600">Earth’s Layers and Structure</p>
+        </div>
+    
+        </div>
+    </section>
+    
+    <!-- Modal -->
+    <div id="pdfModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white p-4 max-w-4xl w-full rounded-lg relative">
+        <button onclick="closePDFModal()" class="absolute top-2 right-2 text-xl font-bold text-red-500 hover:text-red-700">✖</button>
+        <iframe id="pdfViewer" src="" width="100%" height="600px" class="rounded-md shadow-inner"></iframe>
+        </div>
+    </div>
+    
+    <script>
+    function openPDFModal(pdfPath) {
+        document.getElementById('pdfViewer').src = pdfPath;
+        document.getElementById('pdfModal').classList.remove('hidden');
+    }
+    function closePDFModal() {
+        document.getElementById('pdfViewer').src = "";
+        document.getElementById('pdfModal').classList.add('hidden');
+    }
+    </script>
+  
+        <!-- Instructional Materials Section -->
+        <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8">
+            <h2 class="text-3xl font-bold text-maroon mb-6">Instructional Materials Used</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/instructional-materials/IM1.png" alt="Instructional Material 1" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">January 30</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/instructional-materials/IM2.png" alt="Instructional Material 2" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">January 30</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/instructional-materials/IM3.png" alt="Instructional Material 3" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">January 30</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/instructional-materials/IM4.png" alt="Instructional Material 4" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">January 30</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/instructional-materials/IM5.png" alt="Instructional Material 5" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">January 30</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/instructional-materials/IM6.png" alt="Instructional Material 6" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">January 30</div>
+            </div>
+        
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/instructional-materials/IM7.png" alt="Instructional Material 7" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">February 13</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/instructional-materials/IM8.png" alt="Instructional Material 8" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">February 13</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/instructional-materials/IM9.png" alt="Instructional Material 9" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">February 17</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/instructional-materials/IM10.png" alt="Instructional Material 10" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">February 18</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/instructional-materials/IM11.png" alt="Instructional Material 11" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 6</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/instructional-materials/IM12.png" alt="Instructional Material 12" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 6</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/instructional-materials/IM13.png" alt="Instructional Material 13" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 7</div>
+            </div>
+        
+            </div>
+        </section>
+
+        <!-- Actual Teaching Demo Section -->
+        <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8">
+            <h2 class="text-3xl font-bold text-maroon mb-6">Actual Teaching Demo</h2>
+        
+            <!-- Off-Campus -->
+            <h3 class="text-2xl font-semibold text-maroon mb-4">Off-Campus</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/IC1.jpeg" alt="Off-Campus Demo 1" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">February 14</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/IC2.jpeg" alt="Off-Campus Demo 2" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">February 14</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/IC3.jpeg" alt="Off-Campus Demo 3" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">February 14</div>
+            </div>
+            </div>
+        
+            <!-- In-Campus -->
+            <h3 class="text-2xl font-semibold text-maroon mb-4">In-Campus</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/OC1.jpg" alt="In-Campus Demo 1" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 2</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/OC2.jpg" alt="In-Campus Demo 2" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 2</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/OC3.jpg" alt="In-Campus Demo 3" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 2</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/OC4.jpg" alt="In-Campus Demo 4" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 2</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/OC5.jpg" alt="In-Campus Demo 5" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 2</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/OC6.jpg" alt="In-Campus Demo 6" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 2</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/OC7.jpg" alt="In-Campus Demo 7" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 2</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/OC8.jpg" alt="In-Campus Demo 8" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 2</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/OC9.jpg" alt="In-Campus Demo 9" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 2</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/OC10.jpg" alt="In-Campus Demo 10" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 2</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/OC11.jpg" alt="In-Campus Demo 11" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 2</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/OC12.jpg" alt="In-Campus Demo 12" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 2</div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <img src="/actual-teaching-demo/OC13.jpg" alt="In-Campus Demo 13" class="w-full h-64 object-cover">
+                <div class="bg-gray-100 text-sm text-gray-700 p-2 text-center">March 2</div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Table of Specifications and Exams Section -->
+        <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8">
+            <h2 class="text-3xl font-bold text-maroon mb-6">Table of Specifications & Exams</h2>
+        
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+            <div onclick="openPDFModal('/tos/Economic-9-TOS-4TH QUARTER.pdf')" class="cursor-pointer bg-gradient-to-br from-yellow-100 to-yellow-200 border border-yellow-300 rounded-lg p-6 text-center shadow hover:shadow-lg transition-all">
+                <h3 class="font-semibold text-lg text-yellow-800 mb-2">TOS - Economic 9 (4th Quarter)</h3>
+                <p class="text-sm text-yellow-700">PDF Document</p>
+            </div>
+        
+            <div onclick="openPDFModal('/tos/TOS-FOURTH-QUARTER-AP.pdf')" class="cursor-pointer bg-gradient-to-br from-yellow-100 to-yellow-200 border border-yellow-300 rounded-lg p-6 text-center shadow hover:shadow-lg transition-all">
+                <h3 class="font-semibold text-lg text-yellow-800 mb-2">TOS - AP (4th Quarter)</h3>
+                <p class="text-sm text-yellow-700">PDF Document</p>
+            </div>
+        
+            <div onclick="openPDFModal('/tos/GRADE-9-4TH-EXAMINATION.pdf')" class="cursor-pointer bg-gradient-to-br from-rose-100 to-rose-200 border border-rose-300 rounded-lg p-6 text-center shadow hover:shadow-lg transition-all">
+                <h3 class="font-semibold text-lg text-rose-800 mb-2">Exam - Grade 9 (4th Quarter)</h3>
+                <p class="text-sm text-rose-700">PDF Document</p>
+            </div>
+        
+            <div onclick="openPDFModal('/tos/TQ-4TH-Q-AP10.docx.pdf')" class="cursor-pointer bg-gradient-to-br from-rose-100 to-rose-200 border border-rose-300 rounded-lg p-6 text-center shadow hover:shadow-lg transition-all">
+                <h3 class="font-semibold text-lg text-rose-800 mb-2">Exam - AP 10 (4th Quarter)</h3>
+                <p class="text-sm text-rose-700">PDF Document</p>
+            </div>
+        
+            </div>
+        </section>
+  
+        <!-- Reusable PDF Modal -->
+        <div id="pdfModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+            <div class="bg-white p-4 max-w-4xl w-full rounded-lg relative">
+            <button onclick="closePDFModal()" class="absolute top-2 right-2 text-xl">✖</button>
+            <iframe id="pdfViewer" src="" width="100%" height="600px" class="rounded-md"></iframe>
+            </div>
+        </div>
+  
+        <script>
+        function openPDFModal(pdfPath) {
+            document.getElementById('pdfViewer').src = pdfPath;
+            document.getElementById('pdfModal').classList.remove('hidden');
+        }
+        function closePDFModal() {
+            document.getElementById('pdfViewer').src = "";
+            document.getElementById('pdfModal').classList.add('hidden');
+        }
+        </script>
+
+    <!-- DepEd Forms Accomplished Section -->
+    <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8">
+        <h2 class="text-3xl font-bold text-maroon mb-6">DepEd Forms Accomplished</h2>
+    
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div onclick="openPDFModal('/deped-form/grade10.pdf')" class="cursor-pointer bg-gradient-to-br from-green-100 to-green-200 border border-green-300 rounded-lg p-6 text-center shadow hover:shadow-lg transition-all">
+            <h3 class="font-semibold text-lg text-green-800 mb-2">Grade 10 Form</h3>
+            <p class="text-sm text-green-700">PDF Document</p>
+        </div>
+        </div>
+    </section>
+
+    <!-- Final Demonstration Documentation Section -->
+    <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8">
+        <h2 class="text-3xl font-bold text-maroon mb-6">Final Demonstration Documentation</h2>
+    
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+            <img src="/final-demo/FD1.jpg" alt="Final Demo 1" class="w-full h-64 object-cover">
+            <div class="p-4">
+            <p class="text-gray-700 text-sm font-medium text-center">Final Demo - March 12</p>
+            </div>
+        </div>
+    
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+            <img src="/final-demo/FD2.jpg" alt="Final Demo 1" class="w-full h-64 object-cover">
+            <div class="p-4">
+            <p class="text-gray-700 text-sm font-medium text-center">Final Demo - March 12</p>
+            </div>
+        </div>
+    
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+            <img src="/final-demo/FD3.jpg" alt="Final Demo 1" class="w-full h-64 object-cover">
+            <div class="p-4">
+            <p class="text-gray-700 text-sm font-medium text-center">Final Demo - March 12</p>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+            <img src="/final-demo/FD4.jpg" alt="Final Demo 1" class="w-full h-64 object-cover">
+            <div class="p-4">
+            <p class="text-gray-700 text-sm font-medium text-center">Final Demo - March 12</p>
+            </div>
+        </div>
+    
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+            <img src="/final-demo/FD5.jpg" alt="Final Demo 1" class="w-full h-64 object-cover">
+            <div class="p-4">
+            <p class="text-gray-700 text-sm font-medium text-center">Final Demo - March 12</p>
+            </div>
+        </div>
+    
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+            <img src="/final-demo/FD6.jpg" alt="Final Demo 1" class="w-full h-64 object-cover">
+            <div class="p-4">
+            <p class="text-gray-700 text-sm font-medium text-center">Final Demo - March 12</p>
+            </div>
+        </div>
+    
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+            <img src="/final-demo/FD7.jpg" alt="Final Demo 1" class="w-full h-64 object-cover">
+            <div class="p-4">
+            <p class="text-gray-700 text-sm font-medium text-center">Final Demo - March 12</p>
+            </div>
+        </div>
+    
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+            <img src="/final-demo/FD8.jpg" alt="Final Demo 1" class="w-full h-64 object-cover">
+            <div class="p-4">
+            <p class="text-gray-700 text-sm font-medium text-center">Final Demo - March 12</p>
+            </div>
+        </div>
+    
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+            <img src="/final-demo/FD9.jpg" alt="Final Demo 1" class="w-full h-64 object-cover">
+            <div class="p-4">
+            <p class="text-gray-700 text-sm font-medium text-center">Final Demo - March 12</p>
+            </div>
+        </div>
+    
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+            <img src="/final-demo/FD10.jpg" alt="Final Demo 1" class="w-full h-64 object-cover">
+            <div class="p-4">
+            <p class="text-gray-700 text-sm font-medium text-center">Final Demo - March 12</p>
+            </div>
+        </div>
+    
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
+            <img src="/final-demo/FD11.jpg" alt="Final Demo 1" class="w-full h-64 object-cover">
+            <div class="p-4">
+            <p class="text-gray-700 text-sm font-medium text-center">Final Demo - March 12</p>
+            </div>
+        </div>
+        </div>
+    </section>  
+    
+        </main>
+
+    <!-- Footer -->
+    <footer class="bg-maroon text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-white/80">© 2025 Angeline Cristine R. Dolz E-Portfolio. All rights reserved.</p>
+        <p class="text-white/60 text-sm mt-2">Camarines Norte State College - College of Education</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

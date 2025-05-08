@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Story Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        maroon: '#800000',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .prose {
+            max-width: none;
+        }
+        
+        .nav-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .nav-menu.hidden {
+            transform: translateX(-100%);
+        }
+
+        .header-gradient {
+            background: linear-gradient(135deg, #800000 0%, #4a0000 100%);
+        }
+
+        .header-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: headerPattern 60s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <!--  Navbar -->
+    <nav class="fixed top-0 w-full bg-maroon/95 backdrop-blur-lg z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-white font-semibold text-lg">Angeline Cristine R. Dolz</span>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex md:hidden">
+                    <button type="button" onclick="toggleMenu()" class="text-white hover:text-gray-300 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="home.html" class="text-white/80 hover:text-white transition-colors">Home</a>
+                    <a href="preliminaries.html" class="text-white/80 hover:text-white transition-colors">Preliminaries</a>
+                    <a href="instructional-competence.html" class="text-white/80 hover:text-white transition-colors">Instructional Competence</a>
+                    <a href="students-page.html" class="text-white/80 hover:text-white transition-colors">Students' Page</a>
+                    <a href="professional-development.html" class="text-white/80 hover:text-white transition-colors">Professional Development</a>
+                    <a href="my-story.html" class="text-yellow-400 font-medium">My Story</a>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="nav-menu hidden md:hidden bg-maroon/95 backdrop-blur-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="home.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Home</a>
+                <a href="preliminaries.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Preliminaries</a>
+                <a href="instructional-competence.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Instructional Competence</a>
+                <a href="students-page.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Students' Page</a>
+                <a href="professional-development.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Professional Development</a>
+                <a href="my-story.html" class="block px-3 py-2 text-yellow-400 font-medium">My Story</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header-gradient relative pt-24 pb-32 overflow-hidden">
+        <div class="header-pattern absolute inset-0 opacity-30"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+                Preliminary Page
+            </h1>
+            <p class="text-xl md:text-2xl text-white/90 font-light max-w-3xl mx-auto">
+                Camarines Norte State College - College of Education
+            </p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-br from-transparent via-transparent to-white transform -skew-y-3"></div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-maroon mb-4">My Story</h2>
+            <div class="w-24 h-1 bg-maroon mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="md:col-span-1">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <img src="profile.jpg" alt="Professional Photo" class="w-full h-auto rounded-lg mb-6">
+                        <div class="space-y-3">
+                            <h3 class="text-xl font-semibold text-maroon">Your Name</h3>
+                            <div class="text-gray-600 space-y-2">
+                                <p>📞 Contact: 0939-825-5273</p>
+                                <p>📧 Email: angelinecristinedolz@gmail.com</p>
+                                <p>🎂 Birthday: December 21, 2002</p>
+                                <p>👥 Parents/Guardian:</p>
+                                <p class="pl-4">Father: Ferdinand Cristino S. Dolz                                </p>
+                                <p class="pl-4">Mother: Melderic R. Dolz                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Details -->
+            <div class="md:col-span-2">
+                <!-- Scholarship Section -->
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                    <h3 class="text-2xl font-semibold text-maroon mb-4">Scholarship</h3>
+                    <div class="prose max-w-none">
+                        <p class="text-gray-600">LGU Scholar</p>
+                    </div>
+                </div>
+
+                <!-- Training Section -->
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                    <h3 class="text-2xl font-semibold text-maroon mb-4">Training Attended</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">                        
+                        <li> Teaching in a Post-Pandemic Classroom Setting Year 3: Pre-Service Teachers’ Training and Seminar 2025</li>
+                    </ul>
+                </div>
+
+                <!-- Skills and Talents Section -->
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                    <h3 class="text-2xl font-semibold text-maroon mb-4">Skills and Talents</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-3 rounded">
+                            <span class="text-gray-600">Singing</span>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded">
+                            <span class="text-gray-600">Writing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Quote Section -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold text-maroon mb-4">Personal Quote</h3>
+                    <blockquote class="text-lg italic text-gray-600 border-l-4 border-maroon pl-4">
+                        "Being a teacher means being a mother to every child."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-maroon text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-white/80">© 2025 Angeline Cristine R. Dolz E-Portfolio. All rights reserved.</p>
+        <p class="text-white/60 text-sm mt-2">Camarines Norte State College - College of Education</p>
+        </div>
+    </footer>
+</body>
+</html>

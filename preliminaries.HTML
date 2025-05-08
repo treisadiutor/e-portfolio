@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preliminary Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        maroon: '#800000',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .prose {
+            max-width: none;
+        }
+        
+        .nav-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .nav-menu.hidden {
+            transform: translateX(-100%);
+        }
+
+        .header-gradient {
+            background: linear-gradient(135deg, #800000 0%, #4a0000 100%);
+        }
+
+        .header-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: headerPattern 60s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-maroon/95 backdrop-blur-lg z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-white font-semibold text-lg">Angeline Cristine R. Dolz</span>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex md:hidden">
+                    <button type="button" onclick="toggleMenu()" class="text-white hover:text-gray-300 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="home.html" class="text-white/80 hover:text-white transition-colors">Home</a>
+                    <a href="preliminaries.html" class="text-yellow-400 font-medium">Preliminaries</a>
+                    <a href="instructional-competence.html" class="text-white/80 hover:text-white transition-colors">Instructional Competence</a>
+                    <a href="students-page.html" class="text-white/80 hover:text-white transition-colors">Students' Page</a>
+                    <a href="professional-development.html" class="text-white/80 hover:text-white transition-colors">Professional Development</a>
+                    <a href="my-story.html" class="text-white/80 hover:text-white transition-colors">My Story</a>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="nav-menu hidden md:hidden bg-maroon/95 backdrop-blur-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="home.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Home</a>
+                <a href="preliminaries.html" class="block px-3 py-2 text-yellow-400 font-medium">Preliminaries</a>
+                <a href="instructional-competence.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Instructional Competence</a>
+                <a href="students-page.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Students' Page</a>
+                <a href="professional-development.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">Professional Development</a>
+                <a href="my-story.html" class="block px-3 py-2 text-white/80 hover:text-white transition-colors">My Story</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header-gradient relative pt-24 pb-32 overflow-hidden">
+        <div class="header-pattern absolute inset-0 opacity-30"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+                Preliminary Page
+            </h1>
+            <p class="text-xl md:text-2xl text-white/90 font-light max-w-3xl mx-auto">
+                Camarines Norte State College - College of Education
+            </p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-br from-transparent via-transparent to-white transform -skew-y-3"></div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8 relative overflow-hidden group">
+            <div class="absolute inset-0 bg-gradient-to-r from-maroon/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <h2 class="text-3xl font-bold text-maroon mb-4 relative">Vision</h2>
+            <p class="text-gray-700 text-lg leading-relaxed relative">CNSC as a premier higher education institution in the Bicol Region</p>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8 relative overflow-hidden group">
+            <div class="absolute inset-0 bg-gradient-to-r from-maroon/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <h2 class="text-3xl font-bold text-maroon mb-4">Mission</h2>
+            <p class="text-gray-700 text-lg leading-relaxed">The Camarines Norte State College shall provide higher and advance studies in the field of education, arts and science, economics, health, engineering, management, finace, accounting, business and public administration, fisheries, agriculture, natural resources development and management and ladderized courses. It shall also respond to research, extension and production services adherent to progressive leadership towards sustainable development.</p>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8">
+            <h2 class="text-3xl font-bold text-maroon mb-6">Goals</h2>
+            <div class="space-y-8">
+                <div class="bg-gray-50 rounded-xl p-6 hover:transform hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-maroon mb-3">KRA 1. Instruction and Student Development</h3>
+                    <p class="text-gray-700 leading-relaxed">Highly-competitive graduates equipped with the appropriate higher education, training, skills and attitude that are responsive to industry needs and the world of work.</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 hover:transform hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-maroon mb-3">KRA 2. Research, Development and Extension</h3>
+                    <p class="text-gray-700 leading-relaxed">Enhance the growth and profession of research and development culture and agenda in CNSC not only on identified commodities but also on improving academic programs and administrative services and strengthen extension efforts to reach out to the communities.</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 hover:transform hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-maroon mb-3">KRA 3. Administration and Management of Resources</h3>
+                    <p class="text-gray-700 leading-relaxed">Cultivate efficiency and effectiveness in the administration of the affairs of CNSC including the operation of productive and profitable income-generating projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8">
+                <h2 class="text-3xl font-bold text-maroon mb-4">Camarines Norte State College History</h2>
+                <p class="text-gray-700 leading-relaxed">The CAMARINES NORTE STATE COLLEGE has originated from the Camarines Norte High School (CNHS) which was established in 1920. On June 23, 1973 Parliamentary Bill No. 2378 was approved and signed into law converting Camarines Norte High School to Camarines Norte National High School (CNNHS). It was on the 23rd day of July 1991 when former Congressman Renato M. Unico introduced House Bill No. 31647 in the House of Representatives during its fifth Regular Session. After it was finally passed by the Senate and the House of Representatives, the Bill was signed into Law by Former President Corazon C. Aquino on April 2, 1992 as Republic Act No. 7352 also known as "An Act Converting the present Camarines Norte National High School in the Municipality of Daet into a State College to be known as the Camarines Norte State College (CNSC) integrating for the purpose the Abaño Pilot Elementary School in Daet, Mercedes School of Fisheries in Mercedes, National Agricultural School in Labo, and Camarines Norte School of Arts and Trades in Jose Panganiban all in the province of Camarines Norte and appropriating funds thereof."</p>
+            </section>
+
+            <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8">
+                <h2 class="text-3xl font-bold text-maroon mb-4">Camarines Norte State College, College of Education History</h2>
+                <p class="text-gray-700 leading-relaxed">The Abaño Pilot Elementary School, now Abaño Campus, has an area of 0.8684 hectares. It was established in 1953 and was designated the pilot school of the Division of Camarines Norte in 1959 and later became a regional pilot school by virtue of its good performance in the field of elementary education. Philanthropist Dr. Jose Abaño donated the lot. It houses the Secondary and Elementary Laboratory Schools of the College of Education and the CNSC Training Center.</p>
+            </section>
+        </div>
+
+        <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8">
+            <h2 class="text-3xl font-bold text-maroon mb-6">College of Education Administrative Staff</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 rounded-xl p-6 hover:transform hover:-translate-y-1 transition-all duration-300">
+                    <strong class="text-maroon text-lg block mb-2">Dr. Marlo M. De La Cruz, PECE</strong>
+                    <span class="text-gray-600">PRESIDENT</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 hover:transform hover:-translate-y-1 transition-all duration-300">
+                    <strong class="text-maroon text-lg block mb-2">DR. DOLORES C. VOLANTE</strong>
+                    <span class="text-gray-600">
+                        Vice-President<br>
+                        Academic Affairs</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 hover:transform hover:-translate-y-1 transition-all duration-300">
+                    <strong class="text-maroon text-lg block mb-2">DR. EDGAR P. ABAN </strong>
+                    <span class="text-gray-600">DEAN</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 hover:transform hover:-translate-y-1 transition-all duration-300">
+                    <strong class="text-maroon text-lg block mb-2">DR. JUDELIN S. ALVAREZ</strong>
+                    <span class="text-gray-600">Program<br>
+                        Chairperson</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8">
+            <h2 class="text-3xl font-bold text-maroon mb-6">Student Teacher Responsibilities</h2>
+            <ol class="p-8 space-y-3 text-gray-700" style="list-style-type: lower-alpha;">
+                <li>Enter with internship contract/agreement.</li>
+                <li>Notify the Cooperating Teacher in case of absence and have a parent/guardian co-sign the absence/contract.</li>
+                <li>Report for internship in the cooperating school starting January 20, 2025; complete the required internship period (until April 16, 2025); and comply with completion week requirements (April 30, 2025).</li>
+                <li>Participate actively in school-related activities while giving priority to academic-related activities.</li>
+                <li>Observe a proper mentee-mentor relationship with the cooperating teacher, school head, and other teachers by showing due respect at all times.</li>
+                <li>Be open to suggestions, recommendations, and constructive criticism from the Cooperating Teacher.</li>
+                <li>Respect the dignity and rights of the pupils/students.</li>
+                <li>Come prepared at all times.</li>
+                <li>Project a positive image as a teacher by adhering to the proper dress code, Code of Ethics, and punctuality during all internship activities.</li>
+                <li>Submit a daily journal of experiences to the Supervising Teacher/Adviser, detailing training activities, encountered problems, and reflections.</li>
+                <li>Submit Teaching Internship requirements to the Teacher/Adviser (April 2025) and accomplish the Daily Time Record (DTR).</li>
+                <li>Perform a final demo teaching session with the cooperating teacher and school head serving as raters and observers.</li>
+                <li>Sign in and out of the logbook managed by the school's PST focal person.</li>
+            </ol>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8 relative overflow-hidden group">
+            <div class="absolute inset-0 bg-gradient-to-r from-maroon/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <h2 class="text-3xl font-bold text-maroon mb-6">DepEd Statement</h2>
+            <div class="text-gray-700 text-lg leading-relaxed space-y-6">
+            <div>
+                <h3 class="text-2xl font-semibold mb-2">The DepEd Vision</h3>
+                <p class="whitespace-pre-line">
+    We dream of Filipinos
+    who passionately love their country
+    and whose values and competencies
+    enable them to realize their full potential
+    and contribute meaningfully to building the nation.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-2xl font-semibold mb-2">The DepEd Mission</h3>
+                <p class="whitespace-pre-line">
+    To protect and promote the right of every Filipino to quality, equitable, culture-based, and complete basic education where:
+
+    Students learn in a child-friendly, gender-sensitive, safe, and motivating environment.
+    Teachers facilitate learning and constantly nurture every learner.
+    Administrators and staff, as stewards of the institution, ensure an enabling and supportive environment for effective learning to happen.
+    Family, community, and other stakeholders are actively engaged and share responsibility for developing life-long learners.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-2xl font-semibold mb-2">DepEd Core Values</h3>
+                <p class="whitespace-pre-line">
+    Maka-Diyos
+    Maka-tao
+    Makakalikasan
+    Makabansa
+                </p>
+            </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8 relative overflow-hidden group">
+            <div class="absolute inset-0 bg-gradient-to-r from-maroon/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <h2 class="text-3xl font-bold text-maroon mb-4">Moreno Integrated School History</h2>
+            <p class="text-gray-700 text-lg leading-relaxed">
+                Moreno Integrated School is a public secondary school established in the year 1995 and started operating under the authority of the Department of Education the same year. The mandate of Moreno Integrated School is defined by Republic Act 9155, Governance of Basic Education and EFA, which authorizes the Department of Education to establish schools in every barangay as part of the national goal. The school perseveres in upholding the DepEd Mission of protecting and promoting the right of every Filipino to quality, equitable, culture-based, and complete basic education where students learn in a child-friendly, gender-sensitive, safe, and motivating environment; teachers facilitate learning and nurture every learner; administrators and staff ensure an enabling and supportive environment for effective learning; and family, community, and other stakeholders are actively engaged and share the responsibility for developing life-long learners. The Agency's registered office is located at Gov. Panotes Avenue, Barangay VIII, Daet, Camarines Norte.
+            </p>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8">
+            <h2 class="text-3xl font-bold text-maroon mb-4">MORENO INTEGRATED SCHOOL - DEPED</h2>
+            <ul class="list-disc list-inside text-gray-700">
+            <li><span class="font-medium">DR. CRESTITO M. MORCILLA</span> – Superintendant</li>
+            <li><span class="font-medium">DR. ALICIA I. QUINITO</span> – School Principal</li>
+            <li><span class="font-medium">DR. DARYL I. QUINITO</span> – Head-Teacher in Araling Panlipunan</li>
+            <li><span class="font-medium">DR. JHENY P. VILLACRUZ</span> – Master Teacher I/Cooperating Teacher</li>
+            </ul>
+        </section>
+        <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8">
+            <h2 class="text-3xl font-bold text-maroon mb-6">MORENO INTEGRATED SCHOOL PRE-SERVICE TEACHER RESPONSIBILITY</h2>
+            <ol class="p-8 space-y-3 text-gray-700" style="list-style-type: lower-alpha;">
+                <li>Enters with internship contract/agreement and let parent/guardian co-sign the contract/agreement;</li>
+                <li>Reports for internship in the cooperating school starting February 3, 2025, complete the required internship period until March 14, 2025, and comply with the requirements of the Cooperating Teacher on the completion week (March 17-19, 2025);</li>
+                <li>Participates actively in school-related activities, however, priority should be given to academic-related activities;</li>
+                <li>Observes mentee-mentor relationship with the cooperating teacher, school head and other teachers at the school giving them due respect at all times;</li>
+                <li>Be open to suggestions, recommendations, constructive criticisms of the Cooperating Teacher;</li>
+                <li>Respects the dignity and rights of the pupils/students;</li>
+                <li>Comes prepared at all times;</li>
+                <li>Notifies the Cooperating Teacher in case of absence/s;</li>
+                <li>Projects a good image as a teacher at all times by observing proper dress code, Code of Ethics and punctuality in all activities of the internship;</li>
+                <li>Submits weekly his/her journal on daily bases of experiences to the Supervising Teacher/Adviser noted by Cooperating Teacher describing his/her training activities, problems encountered, reflections on the training experiences;</li>
+                <li>Submits Teaching Internship requirements to the Supervising Teacher/Adviser on or before April 30, 2025;</li>
+                <li>Accomplishes DTR (daily time Record);</li>
+                <li>Performs a final demo teaching with the cooperating teacher and school head as Raters and Observers;</li>
+                <li>Signs in and out of logbook of the school's PST focal person.</li>
+            </ol>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 mb-8 p-8">
+            <h2 class="text-3xl font-bold text-maroon mb-6">Introduction</h2>
+            <blockquote class="border-l-4 border-maroon pl-6 my-8 italic text-gray-700 text-lg">
+                "Being a teacher means being a mother to every child."
+            </blockquote>
+            <p class="text-gray-700 leading-relaxed">As an aspiring educator, I am committed to fostering a classroom environment where students are active participants in their own learning journeys. My teaching philosophy is grounded in the principles of constructivism, which emphasizes that learners construct knowledge through meaningful experiences, collaboration, and reflection.<br><br>
+            I believe that students learn best when they are encouraged to explore, question, and connect new ideas to their prior knowledge. In my classroom, I strive to create opportunities for hands-on activities, open-ended discussions, and real-world problem-solving. By acting as a facilitator and guide, I support my students as they take ownership of their learning, develop critical thinking skills, and grow into lifelong learners.<br>             <br>
+            This portfolio showcases my experiences, lesson plans, and reflections as a pre-service teacher. It is a testament to my dedication to creating a dynamic, inclusive, and student-centered learning environment where every learner is empowered to reach their full potential.</p>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-maroon text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-white/80">© 2025 Angeline Cristine R. Dolz E-Portfolio. All rights reserved.</p>
+        <p class="text-white/60 text-sm mt-2">Camarines Norte State College - College of Education</p>
+        </div>
+    </footer>
+</body>
+</html>
